@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    60deg,
+    rgba(141, 101, 77, 0.682),
+    rgb(190, 181, 181)
+  );
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding-inline: 10%;
+  padding-block: 1rem 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(68, 63, 57);
+  margin-block: 0 2rem;
+
+  background-color: rgba(23, 60, 71, 0.362);
+  box-shadow: 0 1px 10px rgb(76, 64, 64);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(42, 60, 72);
+}
+
+nav a:hover,
+nav a:focus {
+  color: rgba(42, 60, 72, 0.558);
+}
+
+article {
+  grid-area: a;
+}
+
+aside {
+  grid-area: s;
+}
+
+main {
+  margin-inline: 10%;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "a s";
+}
+
+h2,
+h3 {
+  margin-block: 2rem;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+section {
+  margin-block: 1rem;
+}
+
+aside h2 {
+  text-align: left;
+}
+
+aside li {
+  margin-bottom: 1ch;
+  list-style: none;
+}
+
+aside a {
+  color: rgba(20, 30, 78, 0.761);
+}
+
+aside a:hover {
+  color: rgba(20, 30, 78, 0.38);
+}
+
+aside div{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+}
+
+aside .button{
+    display: inline-block;
+
+    padding: 0.3rem 2rem;
+    
+    text-decoration: none;
+
+    color: rgb(243, 242, 241);
+    font-size: 1.1rem;
+    background-image: linear-gradient(
+    45deg,
+    rgba(132, 91, 98, 0.532),
+    rgba(120, 120, 220, 0.698)
+  );
+
+    transition: all ease-in-out 0.1s;
+}
+
+aside .button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 1px 10px 2px rgba(198, 129, 190, 0.784);
+    background-image: linear-gradient(270deg, rgba(211, 148, 158, 0.731), rgba(65, 65, 146, 0.618));
+}
+
+aside:target{
+    display: none;
+}
+
+footer {
+  padding-right: 1rem;
+  background-color: black;
+  color: aliceblue;
+  text-align: right;
+
+  margin-top: auto;
+}
+
+@media screen and (min-width: 1060px) {
+  html {
+    font-size: 1.34rem;
+  }
+}
+
+@media (max-width: 500px) {
+    main {
+      grid-template-areas:
+        "a"
+        "s";
+      grid-template-columns: 1fr;
+    }
+  }
+  
